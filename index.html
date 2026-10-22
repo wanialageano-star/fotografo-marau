@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fotógrafo em Maraú</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: memo de decisão em coluna única, com comparativo de preços como peça central */
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --fg:#14213a; --muted:#5b6679; --line:#dde3ec;
+  --accent:#0b4fd6; --accent-soft:#e6eefc; --good:#127a4b; --good-soft:#e1f4ea; --warn:#9a5b00; --warn-soft:#fdf0d8;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1424; --surface:#141d33; --fg:#e8edf7; --muted:#9aa6bd; --line:#26324d;
+  --accent:#6b9bff; --accent-soft:#1a2a50; --good:#4cc791; --good-soft:#123326; --warn:#f0b24f; --warn-soft:#3a2b0d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1424; --surface:#141d33; --fg:#e8edf7; --muted:#9aa6bd; --line:#26324d;
+  --accent:#6b9bff; --accent-soft:#1a2a50; --good:#4cc791; --good-soft:#123326; --warn:#f0b24f; --warn-soft:#3a2b0d; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+img{max-width:100%}
+main{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:1.4rem;font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.05rem;font-weight:600}
+p{margin:0}
+.label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header{display:flex;flex-direction:column;gap:14px}
+.lead{font-size:1.1rem;color:var(--muted);max-width:65ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.85rem;color:var(--muted)}
+.meta b{color:var(--fg);font-weight:600}
+section{display:flex;flex-direction:column;gap:16px;min-width:0}
+.reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.reason{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.reason p{color:var(--muted);font-size:.95rem}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.95rem;min-width:620px}
+th,td{padding:12px 16px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+tbody tr:last-child td{border-bottom:0}
+td.prop{font-weight:700;color:var(--accent)}
+.neg{color:var(--good);font-weight:600}
+.eq{color:var(--muted)}
+.pos{color:var(--warn);font-weight:600}
+.note{font-size:.88rem;color:var(--muted);max-width:70ch}
+.callout{border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;background:var(--warn-soft)}
+.callout h3{color:var(--warn)}
+.callout.good{background:var(--good-soft)}
+.callout.good h3{color:var(--good)}
+.callout p{font-size:.95rem}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
+.gear{display:flex;flex-wrap:wrap;gap:8px}
+.gear span{background:var(--accent-soft);color:var(--accent);font-size:.85rem;font-weight:600;padding:6px 12px;border-radius:999px}
+.ask{background:var(--accent);color:#fff;border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:10px}
+:root[data-theme="dark"] .ask{color:#0d1424}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ask{color:#0d1424}}
+.ask h2{color:inherit}
+.ask p{max-width:62ch}
+blockquote{margin:0;border-left:3px solid var(--accent);padding:4px 0 4px 16px;color:var(--muted);font-size:.95rem;max-width:65ch}
+footer{font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <span class="label">Franquias · Fotografia · Maraú (BA)</span>
+  <h1>Precisamos contratar o Pedro Teixeira Ingber</h1>
+  <p class="lead">É o único fotógrafo viável que sobrou na região de Maraú. A proposta dele fica acima da nossa tabela, mas abaixo do que pagávamos à fotógrafa anterior.</p>
+  <div class="meta"><span><b>Região:</b> Maraú, BA</span><span><b>Fotógrafa anterior:</b> inativa (distrato)</span><span><b>Decisão pedida:</b> aprovar a proposta</span></div>
+</header>
+
+<section>
+  <h2>Por que ele</h2>
+  <div class="reasons">
+    <div class="reason"><h3>Não há outra opção</h3><p>Já prospectamos e conversamos com todos os fotógrafos da região. Maraú é isolada e de difícil acesso, e ninguém de fora cobre a área de forma viável.</p></div>
+    <div class="reason"><h3>Está preparado</h3><p>Tem experiência em fotografia de imóveis, CNPJ regularizado e trabalha com edição no Lightroom.</p></div>
+    <div class="reason"><h3>Quer a parceria</h3><p>Fez uma contraproposta para viabilizar o acordo, em vez de recusar a nossa tabela.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Equipamento</h2>
+  <div class="gear"><span>Sony a7 III mirrorless</span><span>Lente 24-70 mm</span><span>Fisheye 16 mm</span><span>Tripé</span><span>Edição no Lightroom</span><span>CNPJ ativo</span></div>
+</section>
+
+<section>
+  <h2>Valores por sessão</h2>
+  <p class="note">Comparativo entre o que pagávamos à fotógrafa anterior e a proposta do Pedro, por tipo de imóvel.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Imóvel</th><th>Fotógrafa anterior</th><th>Tabela Seazone</th><th>Proposta Pedro</th><th>Pedro vs. anterior</th><th>Pedro vs. tabela</th></tr></thead>
+      <tbody>
+        <tr><td>Studio</td><td>R$ 300</td><td>R$ 200</td><td class="prop">R$ 250</td><td class="neg">−R$ 50 (−17%)</td><td class="pos">+R$ 50</td></tr>
+        <tr><td>1 quarto</td><td>R$ 300</td><td>R$ 225</td><td class="prop">R$ 275</td><td class="neg">−R$ 25 (−8%)</td><td class="pos">+R$ 50</td></tr>
+        <tr><td>2 quartos</td><td>R$ 400</td><td>R$ 250</td><td class="prop">R$ 300</td><td class="neg">−R$ 100 (−25%)</td><td class="pos">+R$ 50</td></tr>
+        <tr><td>3 quartos</td><td>R$ 450</td><td>R$ 300</td><td class="prop">R$ 350</td><td class="neg">−R$ 100 (−22%)</td><td class="pos">+R$ 50</td></tr>
+        <tr><td>4 quartos ou mais</td><td>R$ 500</td><td>R$ 350</td><td class="prop">R$ 400</td><td class="neg">−R$ 100 (−20%)</td><td class="pos">+R$ 50</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">A coluna Tabela Seazone é a proposta menos o ajuste de R$ 50 por categoria que o Pedro descreveu. Confirmar com a tabela oficial antes de enviar.</p>
+  <div class="callout good"><h3>Resultado</h3><p>Nas cinco categorias a proposta fica abaixo do que pagávamos. O ajuste sobre a nossa tabela é de R$ 50 por sessão.</p></div>
+</section>
+
+<section>
+  <h2>Deslocamento e grandes operações</h2>
+  <div class="two">
+    <div class="reason"><h3>Deslocamento</h3>
+      <ul>
+        <li>Imóveis próximos de Algodões: sem adicional.</li>
+        <li>Taipu de Fora e Barra Grande: ele pede adicional fixo de R$ 100.</li>
+        <li>Nossa sugestão: pagar R$ 1,20 por km no lugar do valor fixo.</li>
+        <li>Vários imóveis próximos no mesmo dia: ele otimiza o deslocamento.</li>
+      </ul>
+    </div>
+    <div class="reason"><h3>Grandes operações</h3>
+      <ul>
+        <li>Ele propõe 15% a partir de 10 imóveis no mesmo local, com o argumento de que produção, seleção, edição e entrega seguem sendo feitas imóvel a imóvel.</li>
+        <li>Nossa posição: manter os 30% de desconto, que é o padrão em todos os contratos de fotógrafos da Seazone.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout"><h3>Sugestão: deslocamento a R$ 1,20 por km</h3><p>Com o adicional fixo de R$ 100, a sessão em Taipu de Fora ou Barra Grande custa R$ 350 (studio), R$ 375 (1 quarto), R$ 400 (2 quartos), R$ 450 (3 quartos) e R$ 500 (4+). Isso empata com o valor anterior em 2, 3 e 4+ quartos e fica R$ 50 e R$ 75 acima em studio e 1 quarto. Cobrando R$ 1,20 por km, o adicional só chega a R$ 100 em 83 km. Abaixo disso o custo cai, e o pagamento acompanha a distância real de cada imóvel, o que também evita cobrar o mesmo valor por trajetos curtos e longos.</p></div>
+</section>
+
+<section>
+  <h2>Em palavras dele</h2>
+  <blockquote>"Tenho bastante interesse na parceria e acredito que esses ajustes podem tornar a operação viável para ambos."</blockquote>
+</section>
+
+<div class="ask">
+  <span class="label" style="color:inherit;opacity:.8">Recomendação</span>
+  <h2>Aprovar a proposta e fechar com o Pedro</h2>
+  <p>Sem fotógrafo na região, os imóveis de Maraú ficam sem material novo e sem padrão de foto. A proposta custa menos que o contrato anterior na tabela base, e o profissional já tem equipamento e experiência. Sugestão de próximo passo: aceitar a tabela, propor o deslocamento a R$ 1,20 por km no lugar do adicional fixo de R$ 100 e manter o desconto de 30% para grandes operações, por ser padrão em todos os nossos contratos.</p>
+</div>
+
+<footer>Fontes: proposta enviada pelo fotógrafo (mensagem das 11:30) e cadastro da fotógrafa anterior no Sapron.</footer>
+</main>
+</body>
+</html>
